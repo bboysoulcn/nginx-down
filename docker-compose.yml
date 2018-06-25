@@ -2,10 +2,10 @@ version: '2'
 
 services: 
   download:
-    image: xt_download:1.15.0-alpine
+    image: xtdockerhub.com/baseimage/xt_releasedownload:20180625
     build: .
-    container_name: xt_download
+    container_name: xt_releasedownload
     ports:
       - 80:80
     volumes:
-      - /Users/bboysoul/Desktop/work/code/docker-compose/nginx-down/file:/usr/share/nginx/html/data
+      - /home/Release:/usr/share/nginx/html/data
