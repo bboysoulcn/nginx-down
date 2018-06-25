@@ -1,0 +1,11 @@
+version: '2'
+
+services: 
+  download:
+    image: xt_download:1.15.0-alpine
+    build: .
+    container_name: xt_download
+    ports:
+      - 80:80
+    volumes:
+      - /Users/bboysoul/Desktop/work/code/docker-compose/nginx-down/file:/usr/share/nginx/html/data
