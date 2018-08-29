@@ -2,10 +2,9 @@ version: '2'
 
 services: 
   download:
-    image: xtdockerhub.com/baseimage/xt_releasedownload:20180625
     build: .
-    container_name: xt_releasedownload
+    container_name: bboysoul_download
     ports:
-      - 80:80
+      - 8082:80
     volumes:
-      - /home/Release:/usr/share/nginx/html/data
+      - /home/data:/usr/share/nginx/html/data
