@@ -1,10 +1,11 @@
-version: '2'
+version: "2"
 
 services: 
   download:
     build: .
-    container_name: bboysoul_download
+    container_name: "bboysoul_download"
     ports:
-      - 8082:80
+      - "8084:80"
     volumes:
-      - /home/data:/usr/share/nginx/html/data
+      - "/home/data:/usr/share/nginx/html/data"
+      - "/home/docker/nginx-down/log:/var/log/nginx/"
